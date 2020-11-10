@@ -8,9 +8,20 @@ from address_tools.cache import address_cache
 
 
 def get_coordinates_from_address(address: str, resolve=False) -> Coordinates:
-    """Resolve the adress to coordiantes asling the nominatim service from openstreetmap.org
+    """Resolves an address to coordinates.
 
-        return (dict) Returns a dict with lon and lat entries. In case of error the lon/lat contains NaN
+    Parameters
+    ----------
+    address
+        The address to be resolved
+    resolve
+        Try to resolve invalid coordiantes again.
+
+    Returns
+    -------
+    Coordinates
+        The resolved coordinates. In case of an error the Coordinates instance contains NaN values. 
+
     """
     try:
         coordinates = address_cache[address]
@@ -29,8 +40,8 @@ def get_coordinates_from_address(address: str, resolve=False) -> Coordinates:
         return coordinates
 
 
-
 class BaseAddressResolver:
+    """Resolver base class"""
 
     def resolve(self, address) -> Coordinates:
         raise NotImplemented()
