@@ -59,7 +59,7 @@ class OpenStreetMapResolver(BaseAddressResolver):
             raise ResolveCoordinatesError(f'Failed to get address from openstreetmap: {address}, reason: {e}')
 
 class GoogleAddressResolver(BaseAddressResolver):
-    API_KEY = 'AIzaSyDojNKSeUjSjgTC7U87HNLw8zVandK8yMs'
+    API_KEY = 'INSERT YOUR KEY HERE'
     GOOGLE_GEOAPI_URL = 'https://maps.googleapis.com/maps/api/geocode/json'
 
     def resolve(self, address: str) -> Coordinates:
