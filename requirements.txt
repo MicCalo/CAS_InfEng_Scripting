@@ -1,0 +1,9 @@
+requests
+shapely
+folium
+
+# Issue if using Windows 10 (20H2)
+#  https://tinyurl.com/y3dm3h86
+numpy==1.19.3
+
+pandas 
