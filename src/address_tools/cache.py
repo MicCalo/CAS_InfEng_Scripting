@@ -6,7 +6,7 @@ from address_tools.coordinates import Coordinates
 
 class AddressCache:
 
-    CACHE_FILE = 'address_cache.json'
+    CACHE_FILE = '../data/intermediate/address_cache.json'
 
     def __init__(self):
         self.cache = self._read_from_file()
