@@ -19,7 +19,7 @@ class Brooklyn:
         return self.brooklyn_polygon.contains(coordiantes.to_point())
 
     def _load_brooklyn_polygon(self):
-        with open('./../data/intermediate/brooklyn_border.json') as file:
+        with open('./../data/2_intermediate/brooklyn_border.geojson') as file:
             data = json.load(file)
-            return Polygon(data['coordinates'][0])
+            return Polygon(data['geometry']['coordinates'][0])
 

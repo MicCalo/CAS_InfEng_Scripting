@@ -6,7 +6,7 @@ from address_tools.coordinates import Coordinates
 
 class AddressCache:
 
-    CACHE_FILE = '../data/intermediate/address_cache.json'
+    CACHE_FILE = '../data/2_intermediate/address_cache.json'
 
     def __init__(self):
         self.cache = self._read_from_file()
@@ -26,7 +26,7 @@ class AddressCache:
         try:
             return Coordinates.from_json(self.cache[key])
         except KeyError:
-            raise CacheMiss(f'Cache does not contain "{key}"')
+            raise CacheMiss(f"Cache does not contain '{key}''")
 
     def __setitem__(self, key: str, value: Coordinates):
         self.cache[key] = value.to_json()
