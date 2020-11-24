@@ -15,8 +15,8 @@ class Brooklyn:
     def center(self):
         return self.brooklyn_polygon.centroid
 
-    def contains(self, coordiantes: Coordinates):
-        return self.brooklyn_polygon.contains(coordiantes.to_point())
+    def contains(self, coordinates: Coordinates):
+        return self.brooklyn_polygon.contains(coordinates.to_point())
 
     def _load_brooklyn_polygon(self):
         with open('./../data/2_intermediate/brooklyn_border.geojson') as file:

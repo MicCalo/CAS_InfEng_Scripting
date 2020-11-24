@@ -26,4 +26,4 @@ class Coordinates:
         }
 
     def __str__(self):
-        return f'[Coordiantes] {self.lon}/{self.lat}'
+        return f'[Coordinates] {self.lon}/{self.lat}'
