@@ -15,7 +15,7 @@ def get_coordinates_from_address(address: str, resolve=False) -> Coordinates:
     address
         The address to be resolved
     resolve
-        Try to resolve invalid coordiantes again.
+        Try to resolve invalid coordinates again.
 
     Returns
     -------
