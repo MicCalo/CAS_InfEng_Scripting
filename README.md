@@ -6,30 +6,54 @@ Datenquellen:
 - [Schulen](https://data.cityofnewyork.us/Education/Brooklyn-Schools/bkjd-kr4k)
 - [Kitas](https://data.cityofnewyork.us/Health/Childcare-Centers/tdif-34xu)
 
-# Installation 
+# Installation
 
-The following instructions are for VS Code with the python and yupiter extension installed.
+Um die Yupiter Notebooks möglichst einfach laufen zu lassen, kann ein entsprechender Docker Container gebaut und gestaret werden. Das geht sehr einfach mit nur einem Befehl.
 
-## Create a python environment
-Open a terminal in the root path of the project and create a new Python environment in the ``env`` directory.
+Der Container basiert auf der Anaconda Version 2020.07 und enthält die noch benötigten Python Bibliotheken.
 
-```
-c:\python39\python.exe -n venv env
-```
+## Voraussetzungen
 
-Python 3.7/3.8 may work as well.
+- Windows, Mac or Linux OS
+- Docker installiert
+- Bash Shell wenn ein Mac oder Linux verwendet wird
+- CMD oder Powershell unter Windows
+- Browser
+# Start
 
-## Select the Python interpreter
+## Mac, Linux
 
-Open command palette <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> in VS Code and select `Python: select interpreter`.  Choose the Python executable in the previously created directory.
+Ins Root Verzeichnis des Projekts wechseln
 
-## Open a Python terminal
+    cd <VERZEICHNIS_NAME>
 
-Use the command `Python: Create Terminal` to open a terminal where the python environment is already applied.
+Run aufrufen
 
-## Install libraries
+    ./run.sh
 
-```
-pip install -t requirements.txt
-```
+Unter Umständen ist `run.sh` nicht ausführbar
 
+    chmod +x run.sh
+    ./run.sh
+
+## Windows
+
+### CMD
+
+Ins Root Verzeichnis des Projekts wechseln
+
+    cd <VERZEICHNIS_NAME>
+
+Run aufrufen
+
+    run
+
+### Powershell
+
+Ins Root Verzeichnis des Projekts wechseln
+
+    cd <VERZEICHNIS_NAME>
+
+Run aufrufen
+
+    .\run.ps1
