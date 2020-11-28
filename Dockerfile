@@ -2,7 +2,8 @@
 FROM continuumio/anaconda3:2020.07
 
 # Load the required python libs
-RUN pip install geopandas folium
+COPY requirements.txt /
+RUN pip install -r /requirements.txt
 
 # Create notebooks directroy
 RUN mkdir /opt/notebooks

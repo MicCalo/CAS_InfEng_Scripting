@@ -1,9 +1,2 @@
-requests
-shapely
-folium
-
-# Issue if using Windows 10 (20H2)
-#  https://tinyurl.com/y3dm3h86
-numpy==1.19.3
-
-pandas 
+geopandas==0.8.0
+folium==0.11.0
